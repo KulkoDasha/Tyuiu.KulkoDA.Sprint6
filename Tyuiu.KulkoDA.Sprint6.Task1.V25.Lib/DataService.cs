@@ -10,13 +10,12 @@ namespace Tyuiu.KulkoDA.Sprint6.Task1.V25.Lib
             mass = new double[len];
             double y;
             int count = 0;
-            for(int i = startValue; i < stopValue; i++)
+            for(int i = startValue; i <= stopValue; i++)
             {
                 y = (5 * i + 2.5) / (Math.Sin(i) - 2.0) + 2;
                 mass[count] = Math.Round(y,2);
                 count++;
-                if(Math.Sin(i)==2)
-                    mass[count] = 0;
+                
             }
             return mass;
         }
