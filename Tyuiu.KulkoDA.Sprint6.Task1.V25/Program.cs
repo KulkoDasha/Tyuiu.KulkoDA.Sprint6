@@ -1,4 +1,4 @@
-namespace WinFormsAppChart
+namespace Tyuiu.KulkoDA.Sprint6.Task1.V25
 {
     internal static class Program
     {

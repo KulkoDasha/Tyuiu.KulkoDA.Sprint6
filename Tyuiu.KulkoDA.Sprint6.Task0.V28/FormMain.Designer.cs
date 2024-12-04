@@ -67,6 +67,7 @@
             textYslovie.Name = "textYslovie";
             textYslovie.Size = new Size(134, 129);
             textYslovie.TabIndex = 1;
+            textYslovie.Tag = "";
             textYslovie.Text = "Вычислить выражение по формуле";
             textYslovie.TextChanged += textBox1_TextChanged;
             // 
