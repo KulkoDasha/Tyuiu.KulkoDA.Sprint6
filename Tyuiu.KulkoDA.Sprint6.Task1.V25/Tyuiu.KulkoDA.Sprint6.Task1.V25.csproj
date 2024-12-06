@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tyuiu.KulkoDA.Sprint6.Task1.V25.Lib\Tyuiu.KulkoDA.Sprint6.Task1.V25.Lib.csproj" />
+    <ProjectReference Include="..\Tyuiu.KulkoDA.Sprint6.Task2.V2.Lib\Tyuiu.KulkoDA.Sprint6.Task2.V2.Lib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
