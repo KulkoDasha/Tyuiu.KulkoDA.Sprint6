@@ -14,18 +14,18 @@ namespace Tyuiu.KulkoDA.Sprint6.Task2.V2
             {
                 int a = Convert.ToInt32(textBoxStart_KDA.Text);
                 int z = Convert.ToInt32(textBoxEnd_KDA.Text);
-                
+
                 int len = ds.GetMassFunction(a, z).Length;
                 double[] mass;
                 mass = new double[len];
                 mass = ds.GetMassFunction(a, z);
-                
+
                 for (int i = 0; i < len; i++)
                 {
                     this.dataGridView1.Rows.Add(Convert.ToString(a), Convert.ToString(mass[i]));
                     a++;
                 }
-                
+
             }
             catch
             {
@@ -36,6 +36,11 @@ namespace Tyuiu.KulkoDA.Sprint6.Task2.V2
         private void button_KDA_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Таск2 выполнила студентка группы ИИПб-24-2 Кулько Дарья Андреевна");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -64,18 +64,18 @@
             textBoxYSL_KDA.Size = new Size(436, 155);
             textBoxYSL_KDA.TabIndex = 0;
             textBoxYSL_KDA.Text = "Протабулировать функцию на заданном диапазоне. Результат вывести в DataGridView.\r\n\r\n.  ";
-            textBoxYSL_KDA.TextChanged += this.textBoxYSL_KDA_TextChanged;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridView1.Location = new Point(473, 21);
+            dataGridView1.Location = new Point(508, 21);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 50;
             dataGridView1.Size = new Size(121, 288);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
