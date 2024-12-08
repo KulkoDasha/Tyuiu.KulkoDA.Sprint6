@@ -43,10 +43,13 @@ namespace Tyuiu.KulkoDA.Sprint6.Task4.V18
         {
             string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask4V18.txt");
             File.WriteAllText(path, textBoxDone.Text);
-            DialogResult dialogResult = MessageBox.Show("Файл " + path + "создан, открыть его?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult dialogResult = MessageBox.Show("Файл " + path + " создан, открыть его?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if(dialogResult == DialogResult.Yes)
             {
-              
+                System.Diagnostics.Process txt = new System.Diagnostics.Process();
+                txt.StartInfo.FileName = "notepad";
+                txt.StartInfo.Arguments = path;
+                txt.Start();
             }
         }
     }
