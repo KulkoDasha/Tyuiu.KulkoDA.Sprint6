@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             textBoxDone = new TextBox();
             textBoxStart = new TextBox();
@@ -41,6 +41,7 @@
             groupBoxInput = new GroupBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             groupBoxInput.SuspendLayout();
             SuspendLayout();
@@ -48,17 +49,17 @@
             // chart1
             // 
             chart1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chart1.Legends.Add(legend2);
             chart1.Location = new Point(231, 90);
             chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chart1.Series.Add(series2);
             chart1.Size = new Size(612, 395);
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
@@ -151,11 +152,21 @@
             textBox1.TabIndex = 8;
             textBox1.Text = "Начало";
             // 
+            // groupBox1
+            // 
+            groupBox1.Location = new Point(13, 2);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(301, 82);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Условие";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(855, 497);
+            Controls.Add(groupBox1);
             Controls.Add(buttonHelp);
             Controls.Add(buttonSave);
             Controls.Add(buttonDone);
@@ -183,5 +194,6 @@
         private GroupBox groupBoxInput;
         private TextBox textBox2;
         private TextBox textBox1;
+        private GroupBox groupBox1;
     }
 }
