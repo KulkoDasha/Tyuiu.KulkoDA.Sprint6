@@ -12,4 +12,8 @@
     <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.KulkoDA.Sprint6.Task4.V18.Lib\Tyuiu.KulkoDA.Sprint6.Task4.V18.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
