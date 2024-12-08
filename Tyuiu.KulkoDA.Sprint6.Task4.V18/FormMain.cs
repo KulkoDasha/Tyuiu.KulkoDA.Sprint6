@@ -22,6 +22,7 @@ namespace Tyuiu.KulkoDA.Sprint6.Task4.V18
 
                 for (int i = 0; i < len; i++)
                 {
+                    this.chart1.Series[0].Points.AddXY(a,mass[i]);
                     textBoxDone.AppendText(mass[i] + Environment.NewLine);
                     a++;
                 }
