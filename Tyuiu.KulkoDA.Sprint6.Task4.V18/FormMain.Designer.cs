@@ -105,6 +105,7 @@
             buttonSave.TabIndex = 5;
             buttonSave.Text = "Сохранить";
             buttonSave.UseVisualStyleBackColor = false;
+            buttonSave.Click += buttonSave_Click;
             // 
             // buttonHelp
             // 
