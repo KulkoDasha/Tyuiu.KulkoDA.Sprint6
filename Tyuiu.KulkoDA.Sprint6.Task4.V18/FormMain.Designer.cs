@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             textBoxDone = new TextBox();
             textBoxStart = new TextBox();
@@ -38,23 +38,27 @@
             buttonDone = new Button();
             buttonSave = new Button();
             buttonHelp = new Button();
+            groupBoxInput = new GroupBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            groupBoxInput.SuspendLayout();
             SuspendLayout();
             // 
             // chart1
             // 
             chart1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            chart1.Legends.Add(legend3);
             chart1.Location = new Point(231, 90);
             chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            chart1.Series.Add(series3);
             chart1.Size = new Size(612, 395);
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
@@ -69,14 +73,14 @@
             // 
             // textBoxStart
             // 
-            textBoxStart.Location = new Point(294, 45);
+            textBoxStart.Location = new Point(26, 44);
             textBoxStart.Name = "textBoxStart";
             textBoxStart.Size = new Size(100, 23);
             textBoxStart.TabIndex = 2;
             // 
             // textBoxEnd
             // 
-            textBoxEnd.Location = new Point(417, 45);
+            textBoxEnd.Location = new Point(142, 44);
             textBoxEnd.Name = "textBoxEnd";
             textBoxEnd.Size = new Size(100, 23);
             textBoxEnd.TabIndex = 3;
@@ -112,6 +116,39 @@
             buttonHelp.Text = "Справка";
             buttonHelp.UseVisualStyleBackColor = false;
             // 
+            // groupBoxInput
+            // 
+            groupBoxInput.Controls.Add(textBox2);
+            groupBoxInput.Controls.Add(textBox1);
+            groupBoxInput.Controls.Add(textBoxEnd);
+            groupBoxInput.Controls.Add(textBoxStart);
+            groupBoxInput.Location = new Point(320, 11);
+            groupBoxInput.Name = "groupBoxInput";
+            groupBoxInput.Size = new Size(257, 73);
+            groupBoxInput.TabIndex = 7;
+            groupBoxInput.TabStop = false;
+            groupBoxInput.Text = "Ввод данных";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.MenuBar;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Location = new Point(26, 22);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 16);
+            textBox1.TabIndex = 8;
+            textBox1.Text = "Начало";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.MenuBar;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Location = new Point(142, 22);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 16);
+            textBox2.TabIndex = 9;
+            textBox2.Text = "Конец";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,13 +157,14 @@
             Controls.Add(buttonHelp);
             Controls.Add(buttonSave);
             Controls.Add(buttonDone);
-            Controls.Add(textBoxEnd);
-            Controls.Add(textBoxStart);
             Controls.Add(textBoxDone);
             Controls.Add(chart1);
+            Controls.Add(groupBoxInput);
             Name = "FormMain";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            groupBoxInput.ResumeLayout(false);
+            groupBoxInput.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +178,8 @@
         private Button buttonDone;
         private Button buttonSave;
         private Button buttonHelp;
+        private GroupBox groupBoxInput;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }
