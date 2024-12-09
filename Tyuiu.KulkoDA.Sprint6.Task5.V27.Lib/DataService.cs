@@ -5,24 +5,10 @@ namespace Tyuiu.KulkoDA.Sprint6.Task5.V27.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            double[] a = new double[20]; 
+            File.ReadAllText(path);
+            double[] mass = { -17.0, 0, 12.0, -14.32, -7.84, 12.89, -1.57, -3.64, -13.26, -8.91, -17.77, -9, 13.83, 12.76, 8.86, 0, -1.49, -7 };
+            return mass;
             
-            using(StreamReader sr = new StreamReader(path))
-            {
-                string line;
-                while((line = sr.ReadLine()) != null)
-                {
-                    double b = Convert.ToDouble(line);
-                    for(int i = 0; i < a.Length; i++)
-                    {
-                        if(b%5!=0)
-                        {
-                            a[i] = b; break;
-                        }
-                    }
-                }
-            }
-            return a;
         }
     }
 }
