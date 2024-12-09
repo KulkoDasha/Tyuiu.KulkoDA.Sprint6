@@ -5,19 +5,19 @@ namespace Tyuiu.KulkoDA.Sprint6.Task5.V27.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            double[] a = new double[18]; 
+            double[] a = new double[20]; 
             
             using(StreamReader sr = new StreamReader(path))
             {
                 string line;
                 while((line = sr.ReadLine()) != null)
                 {
-                    double[] b = line.Split(' ').Select(Double.Parse).ToArray();
-                    for(int i =0; i < b.Length; i++)
+                    double b = Convert.ToDouble(line);
+                    for(int i = 0; i < a.Length; i++)
                     {
-                        if (b[i]%5!=0)
+                        if(b%5!=0)
                         {
-                            a[i] = b[i];
+                            a[i] = b;
                         }
                     }
                 }
