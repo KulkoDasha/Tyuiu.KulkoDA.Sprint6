@@ -17,7 +17,7 @@ namespace Tyuiu.KulkoDA.Sprint6.Task5.V27.Lib
                     {
                         if(b%5!=0)
                         {
-                            a[i] = b;
+                            a[i] = b; break;
                         }
                     }
                 }
