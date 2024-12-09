@@ -5,7 +5,7 @@ namespace Tyuiu.KulkoDA.Sprint6.Task5.V27.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            double[] a; 
+            double[] a = new double[18]; 
             
             using(StreamReader sr = new StreamReader(path))
             {
