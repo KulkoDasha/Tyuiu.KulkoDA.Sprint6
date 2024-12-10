@@ -38,8 +38,9 @@
             toolTip = new ToolTip(components);
             buttonHelp_KDA = new Button();
             groupBoxInput_KDA = new GroupBox();
-            groupBoxOutput_KDA = new GroupBox();
+            textBoxPath_KDA = new TextBox();
             textBoxIn_KDA = new TextBox();
+            groupBoxOutput_KDA = new GroupBox();
             textBoxOut_KDA = new TextBox();
             groupBoxYsl_KDA.SuspendLayout();
             groupBoxInput_KDA.SuspendLayout();
@@ -82,6 +83,7 @@
             // 
             // buttonDone_KDA
             // 
+            buttonDone_KDA.Enabled = false;
             buttonDone_KDA.Image = (Image)resources.GetObject("buttonDone_KDA.Image");
             buttonDone_KDA.Location = new Point(96, 7);
             buttonDone_KDA.Name = "buttonDone_KDA";
@@ -114,6 +116,7 @@
             // groupBoxInput_KDA
             // 
             groupBoxInput_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            groupBoxInput_KDA.Controls.Add(textBoxPath_KDA);
             groupBoxInput_KDA.Controls.Add(textBoxIn_KDA);
             groupBoxInput_KDA.Location = new Point(12, 136);
             groupBoxInput_KDA.Name = "groupBoxInput_KDA";
@@ -122,16 +125,15 @@
             groupBoxInput_KDA.TabStop = false;
             groupBoxInput_KDA.Text = "Ввод";
             // 
-            // groupBoxOutput_KDA
+            // textBoxPath_KDA
             // 
-            groupBoxOutput_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            groupBoxOutput_KDA.Controls.Add(textBoxOut_KDA);
-            groupBoxOutput_KDA.Location = new Point(381, 136);
-            groupBoxOutput_KDA.Name = "groupBoxOutput_KDA";
-            groupBoxOutput_KDA.Size = new Size(336, 246);
-            groupBoxOutput_KDA.TabIndex = 5;
-            groupBoxOutput_KDA.TabStop = false;
-            groupBoxOutput_KDA.Text = "Вывод";
+            textBoxPath_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            textBoxPath_KDA.BackColor = SystemColors.MenuBar;
+            textBoxPath_KDA.BorderStyle = BorderStyle.None;
+            textBoxPath_KDA.Location = new Point(42, -3);
+            textBoxPath_KDA.Name = "textBoxPath_KDA";
+            textBoxPath_KDA.Size = new Size(288, 16);
+            textBoxPath_KDA.TabIndex = 1;
             // 
             // textBoxIn_KDA
             // 
@@ -145,9 +147,20 @@
             textBoxIn_KDA.Size = new Size(324, 221);
             textBoxIn_KDA.TabIndex = 0;
             // 
+            // groupBoxOutput_KDA
+            // 
+            groupBoxOutput_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBoxOutput_KDA.Controls.Add(textBoxOut_KDA);
+            groupBoxOutput_KDA.Location = new Point(381, 136);
+            groupBoxOutput_KDA.Name = "groupBoxOutput_KDA";
+            groupBoxOutput_KDA.Size = new Size(336, 246);
+            groupBoxOutput_KDA.TabIndex = 5;
+            groupBoxOutput_KDA.TabStop = false;
+            groupBoxOutput_KDA.Text = "Вывод";
+            // 
             // textBoxOut_KDA
             // 
-            textBoxOut_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            textBoxOut_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBoxOut_KDA.BackColor = SystemColors.ControlLightLight;
             textBoxOut_KDA.BorderStyle = BorderStyle.FixedSingle;
             textBoxOut_KDA.Location = new Point(6, 19);
@@ -169,7 +182,7 @@
             Controls.Add(buttonOpen_KDA);
             Controls.Add(groupBoxYsl_KDA);
             Name = "FormMain";
-            Text = "Form1";
+            Text = "Спринт 6 | Таск 6 | Вариант 8 | Кулько.Д.А";
             groupBoxYsl_KDA.ResumeLayout(false);
             groupBoxYsl_KDA.PerformLayout();
             groupBoxInput_KDA.ResumeLayout(false);
@@ -192,5 +205,6 @@
         private TextBox textBoxIn_KDA;
         private GroupBox groupBoxOutput_KDA;
         private TextBox textBoxOut_KDA;
+        private TextBox textBoxPath_KDA;
     }
 }

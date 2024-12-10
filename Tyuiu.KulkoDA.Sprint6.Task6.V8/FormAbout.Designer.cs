@@ -78,7 +78,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAbout";
-            Text = "FormAbout";
+            Text = "О программе";
             ((System.ComponentModel.ISupportInitialize)pictureBoxAvatar_KDA).EndInit();
             ResumeLayout(false);
             PerformLayout();

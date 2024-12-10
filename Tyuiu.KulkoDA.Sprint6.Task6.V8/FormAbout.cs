@@ -15,6 +15,7 @@ namespace Tyuiu.KulkoDA.Sprint6.Task6.V8
         public FormAbout()
         {
             InitializeComponent();
+            
         }
 
         private void buttonAbout_KDA_Click(object sender, EventArgs e)
