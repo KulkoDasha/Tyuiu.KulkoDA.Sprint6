@@ -75,6 +75,7 @@
             Controls.Add(buttonAbout_KDA);
             Controls.Add(textBoxabout_KDA);
             Controls.Add(pictureBoxAvatar_KDA);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAbout";
