@@ -34,15 +34,15 @@
             groupBoxYsl_KDA = new GroupBox();
             textBoxYsl_KDA = new TextBox();
             groupBoxOutPut_KDA = new GroupBox();
+            dataGridView_KDA = new DataGridView();
             buttonDone_KDA = new Button();
             buttonOpen_KDA = new Button();
             buttonHelp_KDA = new Button();
             chart_KDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            dataGridView_KDA = new DataGridView();
             groupBoxYsl_KDA.SuspendLayout();
             groupBoxOutPut_KDA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart_KDA).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_KDA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart_KDA).BeginInit();
             SuspendLayout();
             // 
             // groupBoxYsl_KDA
@@ -75,6 +75,15 @@
             groupBoxOutPut_KDA.TabIndex = 0;
             groupBoxOutPut_KDA.TabStop = false;
             groupBoxOutPut_KDA.Text = "Вывод данных:";
+            // 
+            // dataGridView_KDA
+            // 
+            dataGridView_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            dataGridView_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_KDA.Location = new Point(3, 19);
+            dataGridView_KDA.Name = "dataGridView_KDA";
+            dataGridView_KDA.Size = new Size(150, 322);
+            dataGridView_KDA.TabIndex = 0;
             // 
             // buttonDone_KDA
             // 
@@ -127,14 +136,6 @@
             chart_KDA.TabIndex = 4;
             chart_KDA.Text = "chart1";
             // 
-            // dataGridView_KDA
-            // 
-            dataGridView_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_KDA.Location = new Point(3, 19);
-            dataGridView_KDA.Name = "dataGridView_KDA";
-            dataGridView_KDA.Size = new Size(150, 322);
-            dataGridView_KDA.TabIndex = 0;
-            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -151,8 +152,8 @@
             groupBoxYsl_KDA.ResumeLayout(false);
             groupBoxYsl_KDA.PerformLayout();
             groupBoxOutPut_KDA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chart_KDA).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_KDA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart_KDA).EndInit();
             ResumeLayout(false);
         }
 
