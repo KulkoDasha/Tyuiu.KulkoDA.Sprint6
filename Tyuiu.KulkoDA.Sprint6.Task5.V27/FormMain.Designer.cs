@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxYsl_KDA = new GroupBox();
+            textBoxYsl_KDA = new TextBox();
             groupBoxOutPut_KDA = new GroupBox();
-            textBoxDone_KDA = new TextBox();
             buttonDone_KDA = new Button();
             buttonOpen_KDA = new Button();
             buttonHelp_KDA = new Button();
-            textBoxYsl_KDA = new TextBox();
             chart_KDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            dataGridView_KDA = new DataGridView();
             groupBoxYsl_KDA.SuspendLayout();
             groupBoxOutPut_KDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart_KDA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_KDA).BeginInit();
             SuspendLayout();
             // 
             // groupBoxYsl_KDA
@@ -54,60 +55,6 @@
             groupBoxYsl_KDA.TabStop = false;
             groupBoxYsl_KDA.Text = "Условие:";
             // 
-            // groupBoxOutPut_KDA
-            // 
-            groupBoxOutPut_KDA.Controls.Add(textBoxDone_KDA);
-            groupBoxOutPut_KDA.Location = new Point(3, 100);
-            groupBoxOutPut_KDA.Name = "groupBoxOutPut_KDA";
-            groupBoxOutPut_KDA.Size = new Size(159, 347);
-            groupBoxOutPut_KDA.TabIndex = 0;
-            groupBoxOutPut_KDA.TabStop = false;
-            groupBoxOutPut_KDA.Text = "Вывод данных:";
-            // 
-            // textBoxDone_KDA
-            // 
-            textBoxDone_KDA.BackColor = SystemColors.GrayText;
-            textBoxDone_KDA.BorderStyle = BorderStyle.FixedSingle;
-            textBoxDone_KDA.Location = new Point(3, 19);
-            textBoxDone_KDA.Multiline = true;
-            textBoxDone_KDA.Name = "textBoxDone_KDA";
-            textBoxDone_KDA.Size = new Size(150, 322);
-            textBoxDone_KDA.TabIndex = 0;
-            // 
-            // buttonDone_KDA
-            // 
-            buttonDone_KDA.BackColor = Color.LightCoral;
-            buttonDone_KDA.Location = new Point(462, 36);
-            buttonDone_KDA.Name = "buttonDone_KDA";
-            buttonDone_KDA.Size = new Size(86, 49);
-            buttonDone_KDA.TabIndex = 1;
-            buttonDone_KDA.Text = "Выполнить";
-            buttonDone_KDA.UseVisualStyleBackColor = false;
-            
-            // 
-            // buttonOpen_KDA
-            // 
-            buttonOpen_KDA.BackColor = Color.YellowGreen;
-            buttonOpen_KDA.Location = new Point(568, 36);
-            buttonOpen_KDA.Name = "buttonOpen_KDA";
-            buttonOpen_KDA.Size = new Size(86, 49);
-            buttonOpen_KDA.TabIndex = 2;
-            buttonOpen_KDA.Text = "Открыть файл";
-            buttonOpen_KDA.UseVisualStyleBackColor = false;
-            
-            // 
-            // buttonHelp_KDA
-            // 
-            buttonHelp_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonHelp_KDA.BackColor = Color.PeachPuff;
-            buttonHelp_KDA.Location = new Point(674, 36);
-            buttonHelp_KDA.Name = "buttonHelp_KDA";
-            buttonHelp_KDA.Size = new Size(86, 49);
-            buttonHelp_KDA.TabIndex = 3;
-            buttonHelp_KDA.Text = "Справка";
-            buttonHelp_KDA.UseVisualStyleBackColor = false;
-            
-            // 
             // textBoxYsl_KDA
             // 
             textBoxYsl_KDA.BackColor = SystemColors.MenuBar;
@@ -119,22 +66,74 @@
             textBoxYsl_KDA.TabIndex = 4;
             textBoxYsl_KDA.Text = "Прочитать данные из файла InPutFileTask5V27.txt. Вывести в dataGridView. Вывести все числа не кратные 5. Построить диаграмму по этим значениям.";
             // 
+            // groupBoxOutPut_KDA
+            // 
+            groupBoxOutPut_KDA.Controls.Add(dataGridView_KDA);
+            groupBoxOutPut_KDA.Location = new Point(3, 100);
+            groupBoxOutPut_KDA.Name = "groupBoxOutPut_KDA";
+            groupBoxOutPut_KDA.Size = new Size(159, 347);
+            groupBoxOutPut_KDA.TabIndex = 0;
+            groupBoxOutPut_KDA.TabStop = false;
+            groupBoxOutPut_KDA.Text = "Вывод данных:";
+            // 
+            // buttonDone_KDA
+            // 
+            buttonDone_KDA.BackColor = Color.LightCoral;
+            buttonDone_KDA.Location = new Point(462, 36);
+            buttonDone_KDA.Name = "buttonDone_KDA";
+            buttonDone_KDA.Size = new Size(86, 49);
+            buttonDone_KDA.TabIndex = 1;
+            buttonDone_KDA.Text = "Выполнить";
+            buttonDone_KDA.UseVisualStyleBackColor = false;
+            buttonDone_KDA.Click += buttonDone_KDA_Click;
+            // 
+            // buttonOpen_KDA
+            // 
+            buttonOpen_KDA.BackColor = Color.YellowGreen;
+            buttonOpen_KDA.Location = new Point(568, 36);
+            buttonOpen_KDA.Name = "buttonOpen_KDA";
+            buttonOpen_KDA.Size = new Size(86, 49);
+            buttonOpen_KDA.TabIndex = 2;
+            buttonOpen_KDA.Text = "Открыть файл";
+            buttonOpen_KDA.UseVisualStyleBackColor = false;
+            buttonOpen_KDA.Click += buttonOpen_KDA_Click;
+            // 
+            // buttonHelp_KDA
+            // 
+            buttonHelp_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonHelp_KDA.BackColor = Color.PeachPuff;
+            buttonHelp_KDA.Location = new Point(674, 36);
+            buttonHelp_KDA.Name = "buttonHelp_KDA";
+            buttonHelp_KDA.Size = new Size(86, 49);
+            buttonHelp_KDA.TabIndex = 3;
+            buttonHelp_KDA.Text = "Справка";
+            buttonHelp_KDA.UseVisualStyleBackColor = false;
+            buttonHelp_KDA.Click += buttonHelp_KDA_Click;
+            // 
             // chart_KDA
             // 
             chart_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            chartArea3.Name = "ChartArea1";
-            chart_KDA.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            chart_KDA.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            chart_KDA.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart_KDA.Legends.Add(legend1);
             chart_KDA.Location = new Point(168, 100);
             chart_KDA.Name = "chart_KDA";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            chart_KDA.Series.Add(series3);
-            chart_KDA.Size = new Size(604, 347);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart_KDA.Series.Add(series1);
+            chart_KDA.Size = new Size(620, 347);
             chart_KDA.TabIndex = 4;
             chart_KDA.Text = "chart1";
+            // 
+            // dataGridView_KDA
+            // 
+            dataGridView_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_KDA.Location = new Point(3, 19);
+            dataGridView_KDA.Name = "dataGridView_KDA";
+            dataGridView_KDA.Size = new Size(150, 322);
+            dataGridView_KDA.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -152,8 +151,8 @@
             groupBoxYsl_KDA.ResumeLayout(false);
             groupBoxYsl_KDA.PerformLayout();
             groupBoxOutPut_KDA.ResumeLayout(false);
-            groupBoxOutPut_KDA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chart_KDA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_KDA).EndInit();
             ResumeLayout(false);
         }
 
@@ -161,11 +160,11 @@
 
         private GroupBox groupBoxYsl_KDA;
         private GroupBox groupBoxOutPut_KDA;
-        private TextBox textBoxDone_KDA;
         private Button buttonDone_KDA;
         private Button buttonOpen_KDA;
         private Button buttonHelp_KDA;
         private TextBox textBoxYsl_KDA;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_KDA;
+        private DataGridView dataGridView_KDA;
     }
 }
