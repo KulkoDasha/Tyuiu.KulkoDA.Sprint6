@@ -19,5 +19,10 @@ namespace Tyuiu.KulkoDA.Sprint6.Task6.V8.Lib
             }
             return resStr;
         }
+
+        public string CollectTextFromFile(string path)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
