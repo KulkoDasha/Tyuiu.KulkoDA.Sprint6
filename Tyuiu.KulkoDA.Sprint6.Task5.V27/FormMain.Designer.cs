@@ -28,17 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxYsl_KDA = new GroupBox();
             groupBoxOutPut_KDA = new GroupBox();
             textBoxDone_KDA = new TextBox();
             buttonDone_KDA = new Button();
             buttonOpen_KDA = new Button();
             buttonHelp_KDA = new Button();
+            textBoxYsl_KDA = new TextBox();
+            chart_KDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            groupBoxYsl_KDA.SuspendLayout();
             groupBoxOutPut_KDA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart_KDA).BeginInit();
             SuspendLayout();
             // 
             // groupBoxYsl_KDA
             // 
+            groupBoxYsl_KDA.Controls.Add(textBoxYsl_KDA);
             groupBoxYsl_KDA.Location = new Point(3, 12);
             groupBoxYsl_KDA.Name = "groupBoxYsl_KDA";
             groupBoxYsl_KDA.Size = new Size(418, 82);
@@ -98,11 +106,40 @@
             buttonHelp_KDA.UseVisualStyleBackColor = false;
             buttonHelp_KDA.Click += this.buttonHelp_KDA_Click;
             // 
+            // textBoxYsl_KDA
+            // 
+            textBoxYsl_KDA.BackColor = SystemColors.MenuBar;
+            textBoxYsl_KDA.BorderStyle = BorderStyle.None;
+            textBoxYsl_KDA.Location = new Point(6, 22);
+            textBoxYsl_KDA.Multiline = true;
+            textBoxYsl_KDA.Name = "textBoxYsl_KDA";
+            textBoxYsl_KDA.Size = new Size(406, 54);
+            textBoxYsl_KDA.TabIndex = 4;
+            textBoxYsl_KDA.Text = "Прочитать данные из файла InPutFileTask5V27.txt. Вывести в dataGridView. Вывести все числа не кратные 5. Построить диаграмму по этим значениям.";
+            // 
+            // chart_KDA
+            // 
+            chart_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            chartArea1.Name = "ChartArea1";
+            chart_KDA.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart_KDA.Legends.Add(legend1);
+            chart_KDA.Location = new Point(168, 100);
+            chart_KDA.Name = "chart_KDA";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart_KDA.Series.Add(series1);
+            chart_KDA.Size = new Size(300, 300);
+            chart_KDA.TabIndex = 4;
+            chart_KDA.Text = "chart1";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(chart_KDA);
             Controls.Add(buttonHelp_KDA);
             Controls.Add(buttonOpen_KDA);
             Controls.Add(buttonDone_KDA);
@@ -110,8 +147,11 @@
             Controls.Add(groupBoxYsl_KDA);
             Name = "FormMain";
             Text = "Спринт 6 | Таск 5 | Вариант 27 | Кулько.Д.А";
+            groupBoxYsl_KDA.ResumeLayout(false);
+            groupBoxYsl_KDA.PerformLayout();
             groupBoxOutPut_KDA.ResumeLayout(false);
             groupBoxOutPut_KDA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart_KDA).EndInit();
             ResumeLayout(false);
         }
 
@@ -123,5 +163,7 @@
         private Button buttonDone_KDA;
         private Button buttonOpen_KDA;
         private Button buttonHelp_KDA;
+        private TextBox textBoxYsl_KDA;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_KDA;
     }
 }
