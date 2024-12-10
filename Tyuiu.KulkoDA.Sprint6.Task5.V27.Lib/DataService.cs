@@ -3,12 +3,31 @@ namespace Tyuiu.KulkoDA.Sprint6.Task5.V27.Lib
 {
     public class DataService : ISprint6Task5V27
     {
+        public int len = 0;
         public double[] LoadFromDataFile(string path)
         {
-            File.ReadAllText(path);
-            double[] mass = { -17.0, 12.0, -14.32, -7.84, 12.89, -1.57, -3.64, -13.26, -8.91, -17.77, -9, 13.83, 12.76, 8.86,-1.49, -7 };
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    len++;
+                }
+            }
+            double[] mass = new double[len];
+            int a = 0;
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    mass[a] = Convert.ToDouble(line);
+                    a++;
+                }
+
+            }
+            mass = mass.Where(i=>i%5!=0).ToArray();
             return mass;
-            
         }
     }
 }
