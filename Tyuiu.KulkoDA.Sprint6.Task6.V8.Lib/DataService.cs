@@ -9,10 +9,21 @@ namespace Tyuiu.KulkoDA.Sprint6.Task6.V8.Lib
         {
             string[] a = File.ReadAllLines(path);
             string str = "";
-            StringBuilder sb = new StringBuilder(a.Length);
-            str = sb.Append(a).ToString();
-            
-            return str;
+            string z = "z";
+            string res = "";
+            foreach(string line in a)
+            {
+                str = str + " " + line; 
+            }
+            string[] words = str.Split(' ').ToArray();
+            for(int i = 0;i<words.Length; i++)
+            {
+                if (words[i].Contains(z))
+                {
+                    res = res+ " "+ words[i];
+                }
+            }
+            return res.Trim();
         }
     }
 }
