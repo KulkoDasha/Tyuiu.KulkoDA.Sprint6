@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxYsl_KDA = new GroupBox();
             groupBoxOutPut_KDA = new GroupBox();
             textBoxDone_KDA = new TextBox();
@@ -83,6 +83,7 @@
             buttonDone_KDA.TabIndex = 1;
             buttonDone_KDA.Text = "Выполнить";
             buttonDone_KDA.UseVisualStyleBackColor = false;
+            
             // 
             // buttonOpen_KDA
             // 
@@ -93,6 +94,7 @@
             buttonOpen_KDA.TabIndex = 2;
             buttonOpen_KDA.Text = "Открыть файл";
             buttonOpen_KDA.UseVisualStyleBackColor = false;
+            
             // 
             // buttonHelp_KDA
             // 
@@ -104,7 +106,7 @@
             buttonHelp_KDA.TabIndex = 3;
             buttonHelp_KDA.Text = "Справка";
             buttonHelp_KDA.UseVisualStyleBackColor = false;
-            buttonHelp_KDA.Click += this.buttonHelp_KDA_Click;
+            
             // 
             // textBoxYsl_KDA
             // 
@@ -120,17 +122,17 @@
             // chart_KDA
             // 
             chart_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            chartArea1.Name = "ChartArea1";
-            chart_KDA.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart_KDA.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            chart_KDA.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            chart_KDA.Legends.Add(legend3);
             chart_KDA.Location = new Point(168, 100);
             chart_KDA.Name = "chart_KDA";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart_KDA.Series.Add(series1);
-            chart_KDA.Size = new Size(300, 300);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            chart_KDA.Series.Add(series3);
+            chart_KDA.Size = new Size(604, 347);
             chart_KDA.TabIndex = 4;
             chart_KDA.Text = "chart1";
             // 

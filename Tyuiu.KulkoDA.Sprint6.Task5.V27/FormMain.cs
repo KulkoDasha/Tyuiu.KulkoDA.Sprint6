@@ -6,5 +6,6 @@ namespace Tyuiu.KulkoDA.Sprint6.Task5.V27
         {
             InitializeComponent();
         }
+        
     }
 }
