@@ -3,26 +3,22 @@ namespace Tyuiu.KulkoDA.Sprint6.Task6.V8.Lib
 {
     public class DataService : ISprint6Task6V8
     {
-        public string CollectTextFromFile(string str, string path)
+        public string CollectTextFromFile(string path)
         {
             string resStr = "";
+            string str = "z";
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
-                while((line = reader.ReadLine()) != null)
+                while ((line = reader.ReadLine()) != null)
                 {
-                    if(line.Contains(str))
+                    if (line.Contains(str))
                     {
-                        resStr =resStr + " " + line;
+                        resStr = resStr + " " + line;
                     }
                 }
             }
             return resStr;
-        }
-
-        public string CollectTextFromFile(string path)
-        {
-            throw new NotImplementedException();
         }
     }
 }
