@@ -28,33 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             buttonOpen_KDA = new Button();
             buttonDone_KDA = new Button();
             buttonHelp_KDA = new Button();
             groupBoxYsl_KDA = new GroupBox();
             textBoxYsl_KDA = new TextBox();
+            groupBoxIn_KDA = new GroupBox();
+            dataGridViewIn_KDA = new DataGridView();
+            groupBoxOut_KDA = new GroupBox();
+            dataGridViewOut_KDA = new DataGridView();
+            openFileDialog1 = new OpenFileDialog();
+            toolTip1 = new ToolTip(components);
+            buttonSave_KDA = new Button();
             groupBoxYsl_KDA.SuspendLayout();
+            groupBoxIn_KDA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewIn_KDA).BeginInit();
+            groupBoxOut_KDA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOut_KDA).BeginInit();
             SuspendLayout();
             // 
             // buttonOpen_KDA
             // 
             buttonOpen_KDA.Image = (Image)resources.GetObject("buttonOpen_KDA.Image");
-            buttonOpen_KDA.Location = new Point(35, 12);
+            buttonOpen_KDA.Location = new Point(18, 12);
             buttonOpen_KDA.Name = "buttonOpen_KDA";
             buttonOpen_KDA.Size = new Size(58, 45);
             buttonOpen_KDA.TabIndex = 2;
+            toolTip1.SetToolTip(buttonOpen_KDA, "Открыть файл\r\nЩекрыть файл для обработки");
             buttonOpen_KDA.UseVisualStyleBackColor = true;
+            buttonOpen_KDA.Click += buttonOpen_KDA_Click;
             // 
             // buttonDone_KDA
             // 
             buttonDone_KDA.Enabled = false;
             buttonDone_KDA.Image = (Image)resources.GetObject("buttonDone_KDA.Image");
-            buttonDone_KDA.Location = new Point(115, 12);
+            buttonDone_KDA.Location = new Point(91, 12);
             buttonDone_KDA.Name = "buttonDone_KDA";
             buttonDone_KDA.Size = new Size(58, 45);
             buttonDone_KDA.TabIndex = 3;
             buttonDone_KDA.UseVisualStyleBackColor = true;
+            buttonDone_KDA.Click += buttonDone_KDA_Click;
             // 
             // buttonHelp_KDA
             // 
@@ -65,14 +80,15 @@
             buttonHelp_KDA.Size = new Size(58, 45);
             buttonHelp_KDA.TabIndex = 4;
             buttonHelp_KDA.UseVisualStyleBackColor = true;
+            buttonHelp_KDA.Click += buttonHelp_KDA_Click;
             // 
             // groupBoxYsl_KDA
             // 
             groupBoxYsl_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBoxYsl_KDA.Controls.Add(textBoxYsl_KDA);
-            groupBoxYsl_KDA.Location = new Point(35, 63);
+            groupBoxYsl_KDA.Location = new Point(12, 63);
             groupBoxYsl_KDA.Name = "groupBoxYsl_KDA";
-            groupBoxYsl_KDA.Size = new Size(753, 84);
+            groupBoxYsl_KDA.Size = new Size(776, 84);
             groupBoxYsl_KDA.TabIndex = 5;
             groupBoxYsl_KDA.TabStop = false;
             groupBoxYsl_KDA.Text = "Условие";
@@ -85,16 +101,70 @@
             textBoxYsl_KDA.Location = new Point(6, 22);
             textBoxYsl_KDA.Multiline = true;
             textBoxYsl_KDA.Name = "textBoxYsl_KDA";
-            textBoxYsl_KDA.Size = new Size(741, 56);
+            textBoxYsl_KDA.Size = new Size(764, 56);
             textBoxYsl_KDA.TabIndex = 0;
             textBoxYsl_KDA.Text = resources.GetString("textBoxYsl_KDA.Text");
-            textBoxYsl_KDA.TextChanged += this.textBoxYsl_KDA_TextChanged;
+            // 
+            // groupBoxIn_KDA
+            // 
+            groupBoxIn_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            groupBoxIn_KDA.Controls.Add(dataGridViewIn_KDA);
+            groupBoxIn_KDA.Location = new Point(12, 153);
+            groupBoxIn_KDA.Name = "groupBoxIn_KDA";
+            groupBoxIn_KDA.Size = new Size(386, 285);
+            groupBoxIn_KDA.TabIndex = 6;
+            groupBoxIn_KDA.TabStop = false;
+            groupBoxIn_KDA.Text = "Ввод:";
+            // 
+            // dataGridViewIn_KDA
+            // 
+            dataGridViewIn_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewIn_KDA.Location = new Point(6, 22);
+            dataGridViewIn_KDA.Name = "dataGridViewIn_KDA";
+            dataGridViewIn_KDA.Size = new Size(374, 257);
+            dataGridViewIn_KDA.TabIndex = 0;
+            // 
+            // groupBoxOut_KDA
+            // 
+            groupBoxOut_KDA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            groupBoxOut_KDA.Controls.Add(dataGridViewOut_KDA);
+            groupBoxOut_KDA.Location = new Point(404, 153);
+            groupBoxOut_KDA.Name = "groupBoxOut_KDA";
+            groupBoxOut_KDA.Size = new Size(384, 285);
+            groupBoxOut_KDA.TabIndex = 7;
+            groupBoxOut_KDA.TabStop = false;
+            groupBoxOut_KDA.Text = "Вывод:";
+            // 
+            // dataGridViewOut_KDA
+            // 
+            dataGridViewOut_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOut_KDA.Location = new Point(6, 22);
+            dataGridViewOut_KDA.Name = "dataGridViewOut_KDA";
+            dataGridViewOut_KDA.Size = new Size(372, 257);
+            dataGridViewOut_KDA.TabIndex = 1;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // buttonSave_KDA
+            // 
+            buttonSave_KDA.Enabled = false;
+            buttonSave_KDA.Image = (Image)resources.GetObject("buttonSave_KDA.Image");
+            buttonSave_KDA.Location = new Point(164, 12);
+            buttonSave_KDA.Name = "buttonSave_KDA";
+            buttonSave_KDA.Size = new Size(58, 45);
+            buttonSave_KDA.TabIndex = 8;
+            buttonSave_KDA.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonSave_KDA);
+            Controls.Add(groupBoxOut_KDA);
+            Controls.Add(groupBoxIn_KDA);
             Controls.Add(groupBoxYsl_KDA);
             Controls.Add(buttonHelp_KDA);
             Controls.Add(buttonDone_KDA);
@@ -103,6 +173,10 @@
             Text = "Спринт 6 | Таск 7 | Вариант 13 | Кулько.Д.А";
             groupBoxYsl_KDA.ResumeLayout(false);
             groupBoxYsl_KDA.PerformLayout();
+            groupBoxIn_KDA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewIn_KDA).EndInit();
+            groupBoxOut_KDA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOut_KDA).EndInit();
             ResumeLayout(false);
         }
 
@@ -113,5 +187,12 @@
         private Button buttonHelp_KDA;
         private GroupBox groupBoxYsl_KDA;
         private TextBox textBoxYsl_KDA;
+        private GroupBox groupBoxIn_KDA;
+        private DataGridView dataGridViewIn_KDA;
+        private GroupBox groupBoxOut_KDA;
+        private DataGridView dataGridViewOut_KDA;
+        private OpenFileDialog openFileDialog1;
+        private ToolTip toolTip1;
+        private Button buttonSave_KDA;
     }
 }
