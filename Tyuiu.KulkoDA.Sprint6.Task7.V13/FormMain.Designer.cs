@@ -119,8 +119,10 @@
             // dataGridViewIn_KDA
             // 
             dataGridViewIn_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewIn_KDA.ColumnHeadersVisible = false;
             dataGridViewIn_KDA.Location = new Point(6, 22);
             dataGridViewIn_KDA.Name = "dataGridViewIn_KDA";
+            dataGridViewIn_KDA.RowHeadersVisible = false;
             dataGridViewIn_KDA.Size = new Size(374, 257);
             dataGridViewIn_KDA.TabIndex = 0;
             // 
@@ -138,8 +140,10 @@
             // dataGridViewOut_KDA
             // 
             dataGridViewOut_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOut_KDA.ColumnHeadersVisible = false;
             dataGridViewOut_KDA.Location = new Point(6, 22);
             dataGridViewOut_KDA.Name = "dataGridViewOut_KDA";
+            dataGridViewOut_KDA.RowHeadersVisible = false;
             dataGridViewOut_KDA.Size = new Size(372, 257);
             dataGridViewOut_KDA.TabIndex = 1;
             // 
