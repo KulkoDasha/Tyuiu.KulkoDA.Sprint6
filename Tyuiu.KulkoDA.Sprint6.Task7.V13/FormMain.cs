@@ -32,7 +32,28 @@ namespace Tyuiu.KulkoDA.Sprint6.Task7.V13
 
         private void buttonOpen_KDA_Click(object sender, EventArgs e)
         {
-
+            openFileDialog1.ShowDialog();
+            openFilePath = openFileDialog1.FileName;
+            int[,] arrayValues = new int[rows, columns];
+            arrayValues =LoadFromData(openFilePath);
+            dataGridViewIn_KDA.ColumnCount = columns;
+            dataGridViewIn_KDA.RowCount = rows;
+            dataGridViewOut_KDA.ColumnCount = columns;
+            dataGridViewOut_KDA.RowCount = rows;
+            for(int i = 0; i < columns; i++)
+            {
+                dataGridViewIn_KDA.Width = 25;
+                dataGridViewOut_KDA.Width = 25;
+            }
+            for(int i = 0;i < rows; i++)
+            {
+                for(int j = 0; j < columns;j++)
+                {
+                    dataGridViewIn_KDA.Rows[i].Cells[j].Value = arrayValues[i,j];
+                }
+            }
+            arrayValues =ds.GetMatrix(openFilePath);
+            buttonDone_KDA.Enabled = true;
         }
 
         private void buttonDone_KDA_Click(object sender, EventArgs e)
