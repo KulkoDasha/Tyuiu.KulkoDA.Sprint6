@@ -64,7 +64,7 @@ namespace Tyuiu.KulkoDA.Sprint6.Task7.V13
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    dataGridViewIn_KDA.Rows[i].Cells[j].Value = arrayValues[i, j];
+                    dataGridViewOut_KDA.Rows[i].Cells[j].Value = arrayValues[i, j];
                 }
             }
             buttonSave_KDA.Enabled = true;
