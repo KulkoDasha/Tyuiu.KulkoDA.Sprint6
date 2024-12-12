@@ -25,7 +25,7 @@ namespace Tyuiu.KulkoDA.Sprint6.Task7.V13.Lib
             int[,]res = new int[s,s];
             int rows = matrix.GetUpperBound(0)+1;
             int columns = matrix.Length/rows;
-            int xCol = 6;
+            int xCol = 5;
             for(int r = 0; r<rows;r++)
             {
                 for(int c = xCol;c<=xCol;c++)
