@@ -42,6 +42,7 @@
             openFileDialog1 = new OpenFileDialog();
             toolTip1 = new ToolTip(components);
             buttonSave_KDA = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             groupBoxYsl_KDA.SuspendLayout();
             groupBoxIn_KDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewIn_KDA).BeginInit();
@@ -56,7 +57,7 @@
             buttonOpen_KDA.Name = "buttonOpen_KDA";
             buttonOpen_KDA.Size = new Size(58, 45);
             buttonOpen_KDA.TabIndex = 2;
-            toolTip1.SetToolTip(buttonOpen_KDA, "Открыть файл\r\nЩекрыть файл для обработки");
+            toolTip1.SetToolTip(buttonOpen_KDA, "Открыть файл\r\nВыберите нужный файл для обработки в формате csv\r\n\r\n");
             buttonOpen_KDA.UseVisualStyleBackColor = true;
             buttonOpen_KDA.Click += buttonOpen_KDA_Click;
             // 
@@ -68,6 +69,7 @@
             buttonDone_KDA.Name = "buttonDone_KDA";
             buttonDone_KDA.Size = new Size(58, 45);
             buttonDone_KDA.TabIndex = 3;
+            toolTip1.SetToolTip(buttonDone_KDA, "Выполнить обработку данных");
             buttonDone_KDA.UseVisualStyleBackColor = true;
             buttonDone_KDA.Click += buttonDone_KDA_Click;
             // 
@@ -79,6 +81,7 @@
             buttonHelp_KDA.Name = "buttonHelp_KDA";
             buttonHelp_KDA.Size = new Size(58, 45);
             buttonHelp_KDA.TabIndex = 4;
+            toolTip1.SetToolTip(buttonHelp_KDA, "Сведения о программе");
             buttonHelp_KDA.UseVisualStyleBackColor = true;
             buttonHelp_KDA.Click += buttonHelp_KDA_Click;
             // 
@@ -151,6 +154,11 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // toolTip1
+            // 
+            toolTip1.ToolTipIcon = ToolTipIcon.Info;
+            toolTip1.ToolTipTitle = "Подсказка";
+            // 
             // buttonSave_KDA
             // 
             buttonSave_KDA.Enabled = false;
@@ -159,7 +167,9 @@
             buttonSave_KDA.Name = "buttonSave_KDA";
             buttonSave_KDA.Size = new Size(58, 45);
             buttonSave_KDA.TabIndex = 8;
+            toolTip1.SetToolTip(buttonSave_KDA, "Сохранить обработанные данные в файл формата csv\r\n");
             buttonSave_KDA.UseVisualStyleBackColor = true;
+            buttonSave_KDA.Click += buttonSave_KDA_Click;
             // 
             // FormMain
             // 
@@ -198,5 +208,6 @@
         private OpenFileDialog openFileDialog1;
         private ToolTip toolTip1;
         private Button buttonSave_KDA;
+        private SaveFileDialog saveFileDialog1;
     }
 }
